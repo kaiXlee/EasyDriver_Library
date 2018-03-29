@@ -11,8 +11,8 @@
 *************************************************************************/
 
 
-#ifndef AH_EasyDriver_h
-#define AH_EasyDriver_h
+#ifndef EasyDriver_h
+#define EasyDriver_h
 
 
 
@@ -47,6 +47,8 @@ class AH_EasyDriver {
     void move(int NUMBER_OF_STEPS, boolean DIRECTION);
     void rotate(float DEGREES);
     void revolve(float TIMES, boolean DIRECTION);
+	//EDITED
+	void stepMotor(boolean DIR, int delay);
 
     String getVersion();
 

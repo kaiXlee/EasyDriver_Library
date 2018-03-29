@@ -21,7 +21,7 @@
 
 
 
-#include "AH_EasyDriver.h"
+#include "EasyDriver.h"
 
 //*******************************************************************
 //*** INIT ****
@@ -113,9 +113,30 @@ void AH_EasyDriver::move(int NUMBER_OF_STEPS)
       stepMotor();
     }
   }
-
 }
 
+//*******************************************************************
+//*******************************************************************
+
+void AH_EasyDriver::stepMotor(boolean DIR, int delay)
+{
+	int STEPS =76;
+	setDirection(DIR);
+	while (STEPS > 0) {
+		if (((long)micros()) - this->LAST_STEP_TIME >= this->STEP_DELAY) {
+			this->LAST_STEP_TIME = (long)micros();
+			STEPS--;
+			stepMotor();
+		}
+	}
+	/*
+	setDirection(DIR);
+	digitalWrite(this->STEP_pin, HIGH);
+	delayMicroseconds(100);
+	digitalWrite(this->STEP_pin, LOW);
+	delayMicroseconds(100); 
+	*/
+}
 
 //*******************************************************************
 //*******************************************************************
