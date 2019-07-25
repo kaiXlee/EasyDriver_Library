@@ -5,7 +5,9 @@
 **			  		     				**
 **  Created by A. Hinkel 2012-05-12                                 	**
 **  http://www.alhin.de/arduino/index.php?n=44   		   	**
-**									**
+**  									**
+**  Modified by Kyle Lee						**
+**  									**
 **  Released into the public domain.  		                    	**
 **                                                                  	**
 *************************************************************************/
